@@ -457,7 +457,7 @@ main {
 
 <header class="main-header">
     <div class="d-flex align-items-center">
-  <span class="title">Tasksphere Task Assigner</span>
+  <span class="title">Tasksphere</span>
 </div>
 
     <div class="profile-dropdown" id="profileDropdown">
