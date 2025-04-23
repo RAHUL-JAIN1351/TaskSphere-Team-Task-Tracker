@@ -629,7 +629,7 @@ main {
         <div class="footer-icons d-flex flex-wrap">
           <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/rahul_j_jain?igsh=czZnNjR6OXdnYnk3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
