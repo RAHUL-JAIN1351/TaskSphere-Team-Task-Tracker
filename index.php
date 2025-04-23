@@ -333,6 +333,17 @@ footer p i {
   footer .row > div {
     margin-bottom: 30px;
   }
+ footer{
+    font-size:0.8rem;
+  }
+  .main-header .title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor:pointer;
+    }
+    footer .container .row .footer-bottom{
+        font-size:0rem;
+    }
 }
 
 /* Fade-in animation */
