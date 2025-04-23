@@ -34,6 +34,7 @@ $_SESSION['userid'] = $userid;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TaskSphere | Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -850,6 +851,198 @@ $_SESSION['userid'] = $userid;
 
 
 
+footer {
+  background: rgba(24, 26, 29, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.7;
+  padding: 27px 0 30px;
+  box-shadow: 0 -1px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+footer a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background: #ffc107;
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  transform: translateX(6px);
+  text-shadow: 0 0 8px rgba(13, 110, 253, 0.8);
+}
+
+footer a:hover::before {
+  width: 80%;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2b2e31;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  font-size: 22px;
+  color: #bbb;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2) rotate(-2deg);
+  text-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+}
+
+footer p i {
+  margin-right: 8px;
+  color: #bbb;
+}
+
+@media (max-width: 767px) {
+  footer .row > div {
+    margin-bottom: 30px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer link list styling */
+.footer-links {
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+  padding-left: 28px; /* indent so text aligns under heading text, adjust as needed */
+  position: relative;
+}
+
+/* Optional: add a subtle bullet or icon before each link */
+.footer-links li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #bbb;             /* neutral gray */
+  font-size: 16px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+/* Keep your existing link hover underline-replacement */
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(4px);
+  text-shadow: 0 0 8px rgba(13, 110, 253, 0.8);
+}
+/* On hover—highlight bullet in blue */
+.footer-links li:hover::before {
+  color: #ffc107;
+}
+
+/* And keep the link text highlighting on hover */
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(4px);
+  text-shadow: 0 0 8px rgba(13, 110, 253, 0.8);
+}
+
+/* If you want the bullet to also slide with the text */
+.footer-links li:hover a {
+  transform: translateX(6px);
+}
+
+footer .container .row h5{
+    cursor:pointer;
+}
+
+footer .container .row h5:hover {
+  color: #fff;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(13, 110, 253, 0.8);
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+/* On hover—highlight bullet in blue */
+footer .container .row h5:hover::before {
+  color: #ffc107;
+}
+
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #181a1d; /* match main background */
+}
+main {
+  flex: 1;
+}
 
 
 
@@ -878,6 +1071,8 @@ $_SESSION['userid'] = $userid;
 </head>
 
 <body class="dark-mode">
+
+<main>
 
 <div id="siteLoaderBlur">
   <div class="loader-spinner"></div>
@@ -1085,6 +1280,72 @@ $_SESSION['userid'] = $userid;
     <div id="completedAssignedTasksContainer"></div>
   </div>
 </div>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- About -->
+      <div class="col-md-4">
+        <h5><i class="bi bi-info-circle-fill me-2"></i> About TaskSphere</h5>
+        <p>TaskSphere helps teams streamline task flow, boost collaboration, and increase productivity with a clean, centralized management platform.</p>
+      </div>
+
+      <!-- Quick Links -->
+<div class="col-md-2">
+  <h5><i class="bi bi-lightning-charge-fill me-2"></i> Quick Links</h5>
+  <ul class="footer-links list-unstyled">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Support</a></li>
+  </ul>
+</div>
+
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h5><i class="bi bi-envelope-fill me-2"></i> Contact</h5>
+        <p><i class="bi bi-envelope me-2"></i> support@tasksphere.com</p>
+        <p><i class="bi bi-phone me-2"></i> +91 98765 43210</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3">
+        <h5><i class="bi bi-share-fill me-2"></i> Connect With Us</h5>
+        <div class="footer-icons d-flex flex-wrap">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="font-size:1rem;font-weight:bold;">
+      &copy; <span id="year"></span> Rahul Jain. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
